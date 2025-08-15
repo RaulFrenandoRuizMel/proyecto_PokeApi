@@ -1,0 +1,58 @@
+footer{
+    background-color: #00b4d8;
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: auto;
+    display: block;
+    line-height: 100%;
+
+    
+}
+
+.foot1{
+    width: 25%;
+    margin-left: 2%;
+    display: inline-block;
+    height: auto;
+    line-height: 100%;
+
+}
+
+.foot1 a{
+    display: block;
+    line-height: 100%;
+    font-size: 20px;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer a{
+    color: #738187;
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer a:hover{
+    color:#9e9e9e;
+    text-decoration: underline;
+}
+
+#logofooter{
+    height: 100px;
+    background-image: url(./IMAGENES/berserk-logo-anime-art-anime-art-transparent.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}

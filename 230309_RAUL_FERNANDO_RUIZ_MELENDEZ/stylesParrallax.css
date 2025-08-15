@@ -1,0 +1,33 @@
+.parracss
+{
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(IMAGENES/481909.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+
+@media screen and (max-width: 480px){
+    .parrajs .griffith
+    {
+        width: 18%;
+        height: 30%;
+    }
+    
+}
+
+.cielo
+{
+    width: 200vw;
+    height: 100vh;
+}
+.guts
+{
+    width: 10px;
+}
+
+

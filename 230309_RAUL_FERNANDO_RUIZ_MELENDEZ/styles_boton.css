@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.ingreso
+{
+    height: 150px;
+    width: 70%;
+    background-color: brown;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pokemon
+{
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 15px;
+    line-height: 200%;
+    background-image: url(IMAGENES/klipartz.com.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pokemon>h3
+{
+    font-size: 1em;
+    width: 160px;
+    color: #091c07;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.8);
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input{
+    float: right;
+    width: 50%;
+    height: 50px;
+    margin:auto;
+    line-height: 100%;
+    font-size: large;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#pokemonContainer
+{
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los divs se ajusten en filas */
+    justify-content: center; /* Centrar horizontalmente los divs */
+    gap: 2px; /* Espacio entre las cajas */
+}
+
+.pokemon>img
+{
+    width: 150px;
+    height: auto;
+}

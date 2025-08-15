@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 6em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.5em;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+#logo{
+    width: 25%;
+    height: 200px;
+    background-image: url(/IMAGENES/f5548916ca86b30f7b8f418e4c5c6794.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+#logo2{
+    width: 25%;
+    height: 200px;
+    background-image: url(/IMAGENES/dbv74i9-f4749710-d326-4af4-99a8-51f2140da180.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 3%;
+    display: inline-block;
+}
+
+#titulo{
+    height: 200px;
+    width: 35%;
+    display: inline-block;
+    margin-left: 2%;
+    background-image: url(./IMAGENES/International_Pokémon_logo.svg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+
+header {
+    background-color: #90e0ef;
+    height: auto;
+    width: 100%;
+    display: inline-block;
+}
+
+
+main {
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+    
+}
+
