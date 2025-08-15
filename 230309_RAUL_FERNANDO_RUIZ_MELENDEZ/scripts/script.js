@@ -26,7 +26,7 @@
         let cantidad = parseInt(document.getElementById('cantidad').value);
 
         // Definir un límite máximo, por ejemplo 151 (o el límite de la API)
-        const LIMITE_MAXIMO = 151;
+        const LIMITE_MAXIMO = 1;
 
         // Si la cantidad solicitada es mayor al límite, ajustarla
         if (cantidad >= LIMITE_MAXIMO) {

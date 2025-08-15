@@ -1,0 +1,16 @@
+.parracss
+{
+    height: 25vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-image: url(../IMAGENES/481909.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+
+
+

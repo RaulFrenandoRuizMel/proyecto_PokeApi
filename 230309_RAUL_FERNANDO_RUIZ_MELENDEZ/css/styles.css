@@ -42,7 +42,7 @@ body {
 #logo{
     width: 25%;
     height: 200px;
-    background-image: url(/IMAGENES/f5548916ca86b30f7b8f418e4c5c6794.png);
+    background-image: url(../IMAGENES/f5548916ca86b30f7b8f418e4c5c6794.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -53,7 +53,7 @@ body {
 #logo2{
     width: 25%;
     height: 200px;
-    background-image: url(/IMAGENES/dbv74i9-f4749710-d326-4af4-99a8-51f2140da180.png);
+    background-image: url(../IMAGENES/dbv74i9-f4749710-d326-4af4-99a8-51f2140da180.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -66,7 +66,7 @@ body {
     width: 35%;
     display: inline-block;
     margin-left: 2%;
-    background-image: url(./IMAGENES/International_Pokémon_logo.svg.png);
+    background-image: url(../IMAGENES/International_Pokémon_logo.svg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -83,7 +83,7 @@ header {
 
 
 main {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 40px;
     
