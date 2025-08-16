@@ -1,60 +1,38 @@
-    // Función para obtener datos de la API de Pokémon
-    async function fetchData(limit) {
-        try {
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`); // Se obtiene la cantidad según el input
-            const data = await response.json();
-            return data.results; // Devuelve los resultados
-        } catch (error) {
-            console.error('Error al obtener los datos:', error);
-        }
-    }
+const input_buscar = document.querySelector("input");
+const button_buscar = document.querySelector("button");
 
-    // Función para obtener detalles de un Pokémon (como la imagen)
-    async function obtenerDetalles(url) {
-        try {
-            const response = await fetch(url); // Hacemos una nueva solicitud para obtener detalles del Pokémon
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Error al obtener los detalles:', error);
-        }
-    }
+button_buscar.addEventListener("click", function(){
+    fetch("https://pokeapi.co/api/v2/pokemon/" + input_buscar.value).then(recurso => recurso.json()).then(pokemon=>{
+        console.log(pokemon); //obtiene el recurso de la pokeapi, lo convierte en .JSON de forma directa y despues lo imprime en la consola
+    
+        const numero_pokemon = document.querySelector("#numero_Pokemon");
+        numero_pokemon.innerHTML = "Numero: " + pokemon.id;
+    
+        const nombre_pokemon = document.querySelector("#nombre_Pokemon");
+        nombre_pokemon.innerHTML = pokemon.name;
+    
+        const imagen_pokemon = document.querySelector("img");
+        imagen_pokemon.src = pokemon.sprites.front_default;
+    
+        const altura_pokemon = document.querySelector("#height");
+        altura_pokemon.innerHTML = "Altura: "+ pokemon.height/10;
 
-    // Función para crear las cajas dinámicamente
-    async function crearCajas() {
-        // Obtener el valor del input
-        let cantidad = parseInt(document.getElementById('cantidad').value);
-
-        // Definir un límite máximo, por ejemplo 151 (o el límite de la API)
-        const LIMITE_MAXIMO = 1;
-
-        // Si la cantidad solicitada es mayor al límite, ajustarla
-        if (cantidad >= LIMITE_MAXIMO) {
-                alert(`El máximo número de Pokémon es ${LIMITE_MAXIMO}, Mostrando ${LIMITE_MAXIMO} Pokémon.`);
-        }
-        else if (cantidad <= 0) {
-            alert("Por favor ingresa un número válido mayor a 0.");
-            return;}
-
-        let container = document.getElementById('pokemonContainer');
-        // Limpiar el contenedor antes de agregar nuevas cajas
-        container.innerHTML = '';
-
-        // Obtener los datos de la API
-        let datos = await fetchData(cantidad);
-
-        // Iterar sobre los datos y obtener detalles adicionales para cada Pokémon
-        for (let i = 0; i < datos.length; i++) {
-            let pokemon = datos[i];
-            let detalles = await obtenerDetalles(pokemon.url); // Obtener detalles adicionales como la imagen
-
-            // Crear un div para cada Pokémon
-            let div = document.createElement('div');
-            div.classList.add('pokemon');
-
-            // Añadir contenido a la caja
-            div.innerHTML = `<h3>${pokemon.name}</h3><img src="${detalles.sprites.front_default}" alt="${pokemon.name}" width="300">`;
-
-            container.appendChild(div);
-        }
-    }
+        const peso_pokemon = document.querySelector("#peso_Pokemon");
+        peso_pokemon.innerHTML = "Peso: " + pokemon.weight/10 +"kg";
+    
+        const tipo_pokemon = document.querySelector("#tipo_pokemon");
+        if(pokemon.types.length > 1)
+            {
+                tipo_pokemon.innerHTML = "tipo: "+ pokemon.types[0].type.name + "/" + pokemon.types[1].type.name;
+            }
+            else
+            {
+                tipo_pokemon.innerHTML = "tipo: "+ pokemon.types[0].type.name;
+            }
+        
+        /*    const audio_pokemon = document.querySelector("audio");
+        audio_pokemon.src = pokemon.cries.latest; */
+        const contenedor_audio = document.querySelector("#contenedor_audio")
+        contenedor_audio.innerHTML = "<audio controls><source src='" + pokemon.cries.latest +"'></audio>";
+    })
+    });

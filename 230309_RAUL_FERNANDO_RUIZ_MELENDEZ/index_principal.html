@@ -37,13 +37,34 @@
 
         <div class="ingreso">
 
-            <input type="number" id="cantidad" placeholder="    Ingresa nombre o numero del Pokemon" min="1">
-            <button onclick="crearCajas()" style="padding: 10px 20px; font-size: 16px;">Crear Cajas</button>
+            <input type="text" id="cantidad" placeholder="    Ingresa nombre o numero del Pokemon">
+            <button>Buscar Pokemon</button>
 
         </div>
 
-        <div id="pokemonContainer" class="pokemonContainer"></div>
+        <div id="contenedorPokemon">
+            <img src="" alt="">
 
+            <div id="numero_Pokemon">
+                Numero: -
+            </div>
+            <div id="nombre_Pokemon">
+                Nombre: -
+            </div>
+            <div id="tipo_pokemon">
+                Tipo: -
+            </div>
+            <div id="height">
+                Altura: -
+            </div>
+            <div id="peso_Pokemon">
+                Peso: -
+            </div>
+            <div id="contenedor_audio">
+                <audio controls>
+                
+                </audio>
+            </div>
 
         <script src="/scripts/script.js"></script>
 

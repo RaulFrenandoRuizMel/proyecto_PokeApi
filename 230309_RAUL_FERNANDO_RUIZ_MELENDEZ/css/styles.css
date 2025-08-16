@@ -72,8 +72,6 @@ body {
     background-size: contain;
 }
 
-
-
 header {
     background-color: #90e0ef;
     height: auto;
@@ -81,11 +79,22 @@ header {
     display: inline-block;
 }
 
-
 main {
     width: 100%;
     margin: auto;
     padding: 40px;
     
+}
+
+#contenedorPokemon
+{    
+    width: 30%;
+    height: 75vh;
+    background-color: aqua;
+}
+
+img
+{
+    height: 60px;
 }
 
