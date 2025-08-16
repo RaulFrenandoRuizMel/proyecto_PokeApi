@@ -29,19 +29,20 @@ button_buscar.addEventListener("click", function(){
         const tipo_pokemon = document.querySelector("#tipo_pokemon");
         if(pokemon.types.length > 1)
             {
-                tipo_pokemon.innerHTML = "tipo: "+ pokemon.types[0].type.name + "/" + pokemon.types[1].type.name;
+                tipo_pokemon.innerHTML = "tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + pokemon.types[0].type.name + "</div>" + "/" + "<div class='" + pokemon.types[1].type.name + "'>" + pokemon.types[1].type.name + "</div>";
             }
             else
             {
-                tipo_pokemon.innerHTML = "tipo: "+ pokemon.types[0].type.name;
+                tipo_pokemon.innerHTML = "tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + pokemon.types[0].type.name + "</div>"
             }
         
         /*    const audio_pokemon = document.querySelector("audio");
         audio_pokemon.src = pokemon.cries.latest; */
         const contenedor_audio = document.querySelector("#contenedor_audio")
         contenedor_audio.innerHTML = "<audio controls><source src='" + pokemon.cries.latest +"'></audio>";
+
+        const contenedorPokemon = document.querySelector("#contenedorPokemon");
+        contenedorPokemon.className = ""; // limpia clases anteriores
+        contenedorPokemon.classList.add(pokemon.types[0].type.name);
     })
     });
-
-
-//tarea:hacerle diseño a esta madre

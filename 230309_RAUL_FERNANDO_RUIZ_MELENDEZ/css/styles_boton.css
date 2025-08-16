@@ -4,6 +4,7 @@
 }
 .ingreso
 {
+    position: relative;
     height: 150px;
     width: 70%;
     background-color: brown;
@@ -15,6 +16,49 @@
     margin-bottom: 20px;
     border-radius: 20px;
 }
+
+.blanco
+{
+    position: absolute;   /* se coloca respecto al contenedor */
+    bottom: 0;            /* pegado a la base del contenedor */
+    left: 0;
+    width: 100%;          /* mismo ancho del contenedor */
+    height: 50%;          /* la mitad de alto */
+    background-color: rgb(255, 255, 255); /* color de ejemplo traslúcido */
+    border-top: 2px solid #333;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 0;
+}
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: auto;
+        padding: 10px 20px; 
+        font-size: 16px;
+        z-index: 1;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    input{
+        float: right;
+        width: 60%;
+        height: 50px;
+        margin:auto;
+        line-height: 100%;
+        font-size: large;
+        border: 2px solid #000000;
+        border-radius: 4px;
+        z-index: 1;
+    }
 
 .pokemon
 {
@@ -44,32 +88,7 @@
 }
 
 
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: auto;
-    padding: 10px 20px; 
-    font-size: 16px;
-}
 
-button:hover {
-    background-color: #45a049;
-}
-
-input{
-    float: right;
-    width: 60%;
-    height: 50px;
-    margin:auto;
-    line-height: 100%;
-    font-size: large;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
 
 #pokemonContainer
 {

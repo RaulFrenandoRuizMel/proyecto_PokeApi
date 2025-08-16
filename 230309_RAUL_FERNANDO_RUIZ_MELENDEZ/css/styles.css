@@ -12,7 +12,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.7em;
+    font-size: 1.2em;
 }
 
 p {
@@ -83,18 +83,67 @@ main {
     width: 100%;
     margin: auto;
     padding: 40px;
-    
+    background-image: url(../IMAGENES/pokemon-unite_3840x2160_xtrafondos.com.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: rgba(126, 126, 126, 0.638);
+    background-blend-mode: darken; /* o multiply, overlay según efecto */
 }
 
 #contenedorPokemon
 {    
-    width: 30%;
+    display: inline-block;
+    justify-items: center;
+    width: 25%;
     height: 75vh;
-    background-color: aqua;
+    margin-left: 37%;
+    padding: auto;
+    border-radius: 10%;
+    background-image: url(../IMAGENES/klipartz.com.png);
+    background-size: contain;
+}
+
+#tipo_pokemon
+{
+    width: 30%;
+    border-radius: 10%;
+    background-color: antiquewhite;
+}
+.fire
+{
+    background-color: rgb(143, 0, 0);
+    padding: 4px;
+    border-radius: 2px;
+}
+.grass
+{
+    background-color: rgb(52, 159, 107);
+    padding: 4px;
+    border-radius: 2px;
+}
+.water
+{
+    background-color: rgb(8, 65, 171);
+    padding: 4px;
+    border-radius: 2px;
+}
+.psychic
+{
+    background-color: rgb(81, 2, 150);
+    padding: 4px;
+    border-radius: 2px;
+}
+.fire
+{
+    background-color: rgb(143, 0, 0);
+    padding: 4px;
+    border-radius: 2px;
 }
 
 img
 {
-    height: 60px;
+    width: 80%;
+    margin-left: 10%;
 }
 
