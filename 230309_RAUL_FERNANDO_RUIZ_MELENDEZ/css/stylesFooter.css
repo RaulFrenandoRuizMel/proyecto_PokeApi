@@ -1,5 +1,5 @@
 footer{
-    background-color: #00b4d8;
+    background-color: #832727;
     width: 100%;
     height: 150px;
     padding: 20px;
@@ -43,10 +43,17 @@ footer a:hover{
 
 #logofooter{
     height: 100px;
-    background-image: url(./IMAGENES/berserk-logo-anime-art-anime-art-transparent.png);
+    width: 100px;
+    background-image: url(../IMAGENES/Pokebola-pokeball-png-0.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+
+#logofooter:hover{
+
+    background-image: url(../IMAGENES/pokebola.png);
+    transition: 1s;
 }
 
 .hide{
