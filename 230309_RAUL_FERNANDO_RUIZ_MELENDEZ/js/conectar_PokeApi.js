@@ -38,11 +38,14 @@ button_buscar.addEventListener("click", function(){
         
         /*    const audio_pokemon = document.querySelector("audio");
         audio_pokemon.src = pokemon.cries.latest; */
-        const contenedor_audio = document.querySelector("#contenedor_audio")
+        const contenedor_audio = document.querySelector("#contenedor_audio");
         contenedor_audio.innerHTML = "<audio controls><source src='" + pokemon.cries.latest +"'></audio>";
 
         const contenedorPokemon = document.querySelector("#contenedorPokemon");
-        contenedorPokemon.className = ""; // limpia clases anteriores
-        contenedorPokemon.classList.add(pokemon.types[0].type.name);
+        contenedorPokemon.classList.add(pokemon.types[0].type.name + "1");
+        contenedorPokemon.style.backgroundImage = "url(../IMAGENES/"+ pokemon.types[0].type.name +".png)";
+
+        const Separador_Imagen = document.querySelector("#separador_Imagen");
+        Separador_Imagen.style.display = "none"
     })
     });
