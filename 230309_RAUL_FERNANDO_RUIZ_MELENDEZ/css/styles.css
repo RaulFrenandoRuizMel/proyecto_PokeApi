@@ -19,8 +19,13 @@ p {
     font-size: 1em;
     color: aliceblue;
     margin: 0%;
+    font-family: fuentePokemon;
 }
 
+@font-face {
+    font-family: fuentePokemon;
+    src: url(/Fuentes/yourmate/Yourmate.ttf);
+}
 ul {
     list-style: none;
 }
@@ -124,12 +129,19 @@ main {
 
 #tipo_pokemon
 {
-    width: 30%;
+    width: 45%;
     border-radius: 10%;
     background-color: rgb(161, 0, 0);
     padding: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
 }
+
+#tipo_pokemon div, 
+#tipo_pokemon p {
+    display: inline;
+    margin: 0;
+}
+
 #height
 {
     width: 30%;
@@ -137,6 +149,11 @@ main {
     background-color: rgb(255, 255, 255);
     padding: 5px;
     margin-bottom: 5px;
+}
+
+#height p {
+    display: inline;
+    margin: 0;
 }
 #height p
 {
@@ -154,12 +171,27 @@ main {
 
 #Pokemon, #tipo_pokemon, #height, #peso_Pokemon, #contenedor_audio {
     margin-top: 0%;
-    margin-left: 12%;
+    margin-left: 8%;
     float: left;
+    border-radius: 10px;
 }
 
 audio
 {
     width: 250px;
     height: 54px;
+}
+
+img
+{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+#separador_Imagen
+{
+    width: 80%;
+    height: 52%;
+    margin-left: 10%;
 }

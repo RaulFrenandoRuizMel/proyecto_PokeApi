@@ -12,28 +12,29 @@ button_buscar.addEventListener("click", function(){
         console.log(pokemon); //obtiene el recurso de la pokeapi, lo convierte en .JSON de forma directa y despues lo imprime en la consola
     
         const numero_pokemon = document.querySelector("#numero_Pokemon");
-        numero_pokemon.innerHTML = "<p>Numero: </p>" + "<p>" + pokemon.id + "</p>";
+        numero_pokemon.innerHTML ="<p>" + "Numero: "+ pokemon.id + "</p>";
     
         const nombre_pokemon = document.querySelector("#nombre_Pokemon");
-        nombre_pokemon.innerHTML = "<p>" + pokemon.name + "</p>";
+        nombre_pokemon.innerHTML = "<p>"+ "Nombre: " + pokemon.name + "</p>";
     
         const imagen_pokemon = document.querySelector("img");
         imagen_pokemon.src = pokemon.sprites.front_default;
     
         const altura_pokemon = document.querySelector("#height");
-        altura_pokemon.innerHTML = "<p>Altura: </p> "+ "<p>" + pokemon.height/10 + "</p>";
+        altura_pokemon.innerHTML = "<p>" + "Altura: " + pokemon.height/10 + "M" + "</p>";
 
         const peso_pokemon = document.querySelector("#peso_Pokemon");
-        peso_pokemon.innerHTML = "<p>Peso: </p> " + "<p>" + pokemon.weight/10 + "</p>" + "<p>KG</p>";
+        peso_pokemon.innerHTML = "<p>" + "Peso:" + pokemon.weight/10 + "KG" + "</p>";
     
         const tipo_pokemon = document.querySelector("#tipo_pokemon");
         if(pokemon.types.length > 1)
             {
-                tipo_pokemon.innerHTML = "<p>" + "Tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + "<p>" + pokemon.types[0].type.name + "</p>" + "</div>" + "<p>" + "/" + "</p>" + "<p>" + "Tipo: "+ "<div class='"+pokemon.types[1].type.name+"'>" + "<p>" + pokemon.types[1].type.name + "</p>" + "</div>";
+                tipo_pokemon.innerHTML = "<p>" + "Tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + "<p>" + pokemon.types[0].type.name + "</p>" + "</div>" + "<p>" + "/" + "</p>" + "<p>" + "<div class='"+pokemon.types[1].type.name+"'>" + "<p>" + pokemon.types[1].type.name + "</p>" + "</div>";
+                
             }
             else
             {
-                tipo_pokemon.innerHTML = "<p>" + "Tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + "<p>" + pokemon.types[0].type.name + "</p>" + "</div>" + "<p>" + "<p>.</p>"+ "<p></p>"+ "<p></p>";
+                tipo_pokemon.innerHTML = "<p>" + "Tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + "<p>" + pokemon.types[0].type.name + "</p>" + "</div>";
             }
         
         /*    const audio_pokemon = document.querySelector("audio");
@@ -42,7 +43,9 @@ button_buscar.addEventListener("click", function(){
         contenedor_audio.innerHTML = "<audio controls><source src='" + pokemon.cries.latest +"'></audio>";
 
         const contenedorPokemon = document.querySelector("#contenedorPokemon");
+        contenedorPokemon.className = ""; 
         contenedorPokemon.classList.add(pokemon.types[0].type.name + "1");
+
         contenedorPokemon.style.backgroundImage = "url(../IMAGENES/"+ pokemon.types[0].type.name +".png)";
 
         const Separador_Imagen = document.querySelector("#separador_Imagen");
