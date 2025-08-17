@@ -69,6 +69,13 @@ body {
     display: inline-block;
 }
 
+#logo2:hover{
+
+    background-image: url(../IMAGENES/Ash-Ketchum-PNG-Free-Download.png);
+    transition: 0.5s;
+    margin-left: 50px;
+
+}
 #titulo{
     height: 200px;
     width: 35%;
