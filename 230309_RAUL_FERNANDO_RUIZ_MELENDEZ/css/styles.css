@@ -18,6 +18,7 @@ h3 {
 p {
     font-size: 1em;
     color: aliceblue;
+    margin: 0%;
 }
 
 ul {
@@ -28,6 +29,7 @@ a{
     font-family: 'Ubuntu Mono', monospace;
     font-size: 1.5em;
 }
+
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -83,7 +85,7 @@ header {
 main {
     width: 100%;
     margin: auto;
-    padding: 40px;
+    padding: 0px 40px 40px 40px;
     background-image: url(../IMAGENES/pokemon-unite_3840x2160_xtrafondos.com.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,67 +103,63 @@ main {
     margin-left: 37%;
     padding: auto;
     border-radius: 10%;
-    background-image: url(../IMAGENES/klipartz.com.png);
+    background-image: url(../IMAGENES/electric.png);
     background-size: contain;
+}
+
+#Pokemon
+{
+    width: 30%;
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin-bottom: 5px;
+    color: black;
+    
+}
+#Pokemon p
+{
+    color: black;
 }
 
 #tipo_pokemon
 {
     width: 30%;
     border-radius: 10%;
-    background-color: antiquewhite;
+    background-color: rgb(161, 0, 0);
+    padding: 5px;
+    margin-bottom: 5px;
 }
-.fire
+#height
 {
-    background-color: rgb(143, 0, 0);
-    padding: 4px;
-    border-radius: 2px;
+    width: 30%;
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin-bottom: 5px;
 }
-.grass
+#height p
 {
-    background-color: rgb(52, 159, 107);
-    padding: 4px;
-    border-radius: 2px;
-
-}
-
-.grass1
-{
-    background-color: rgb(0, 207, 107);
-    padding: 4px;
-    border-radius: 2px;
-    background-image: url(../IMAGENES/tauraleza.png);
-    background-size: contain;
-}
-.water
-{
-    background-color: rgb(8, 65, 171);
-    padding: 4px;
-    border-radius: 2px;
-}
-.psychic
-{
-    background-color: rgb(81, 2, 150);
-    padding: 4px;
-    border-radius: 2px;
-}
-.fire
-{
-    background-color: rgb(143, 0, 0);
-    padding: 4px;
-    border-radius: 2px;
+    color: black;
 }
 
-img
+#peso_Pokemon
 {
-    width: 80%;
-    margin-left: 10%;
+    width: 30%;
+    border-radius: 10%;
+    background-color: rgb(161, 0, 0);
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
-#separador_Imagen
-{
-    width: 80%;
-    height: 48%;
-    margin-left: 10%;
+#Pokemon, #tipo_pokemon, #height, #peso_Pokemon, #contenedor_audio {
+    margin-top: 0%;
+    margin-left: 12%;
+    float: left;
 }
 
+audio
+{
+    width: 250px;
+    height: 54px;
+}

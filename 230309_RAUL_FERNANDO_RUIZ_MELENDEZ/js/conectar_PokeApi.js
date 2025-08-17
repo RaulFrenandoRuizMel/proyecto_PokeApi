@@ -12,28 +12,28 @@ button_buscar.addEventListener("click", function(){
         console.log(pokemon); //obtiene el recurso de la pokeapi, lo convierte en .JSON de forma directa y despues lo imprime en la consola
     
         const numero_pokemon = document.querySelector("#numero_Pokemon");
-        numero_pokemon.innerHTML = "Numero: " + pokemon.id;
+        numero_pokemon.innerHTML = "<p>Numero: </p>" + "<p>" + pokemon.id + "</p>";
     
         const nombre_pokemon = document.querySelector("#nombre_Pokemon");
-        nombre_pokemon.innerHTML = pokemon.name;
+        nombre_pokemon.innerHTML = "<p>" + pokemon.name + "</p>";
     
         const imagen_pokemon = document.querySelector("img");
         imagen_pokemon.src = pokemon.sprites.front_default;
     
         const altura_pokemon = document.querySelector("#height");
-        altura_pokemon.innerHTML = "Altura: "+ pokemon.height/10;
+        altura_pokemon.innerHTML = "<p>Altura: </p> "+ "<p>" + pokemon.height/10 + "</p>";
 
         const peso_pokemon = document.querySelector("#peso_Pokemon");
-        peso_pokemon.innerHTML = "Peso: " + pokemon.weight/10 +"kg";
+        peso_pokemon.innerHTML = "<p>Peso: </p> " + "<p>" + pokemon.weight/10 + "</p>" + "<p>KG</p>";
     
         const tipo_pokemon = document.querySelector("#tipo_pokemon");
         if(pokemon.types.length > 1)
             {
-                tipo_pokemon.innerHTML = "tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + pokemon.types[0].type.name + "</div>" + "/" + "<div class='" + pokemon.types[1].type.name + "'>" + pokemon.types[1].type.name + "</div>";
+                tipo_pokemon.innerHTML = "<p>" + "Tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + "<p>" + pokemon.types[0].type.name + "</p>" + "</div>" + "<p>" + "/" + "</p>" + "<p>" + "Tipo: "+ "<div class='"+pokemon.types[1].type.name+"'>" + "<p>" + pokemon.types[1].type.name + "</p>" + "</div>";
             }
             else
             {
-                tipo_pokemon.innerHTML = "tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + pokemon.types[0].type.name + "</div>"
+                tipo_pokemon.innerHTML = "<p>" + "Tipo: "+ "<div class='"+pokemon.types[0].type.name+"'>" + "<p>" + pokemon.types[0].type.name + "</p>" + "</div>" + "<p>" + "<p>.</p>"+ "<p></p>"+ "<p></p>";
             }
         
         /*    const audio_pokemon = document.querySelector("audio");
